@@ -1,0 +1,22 @@
+# Нормалізація кінців рядків: у репозиторії зберігаємо LF,
+# у робочій копії Windows git розгортає їх у CRLF автоматично.
+* text=auto
+
+*.py     text eol=lf
+*.md     text eol=lf
+*.txt    text eol=lf
+*.csv    text eol=lf
+*.ipynb  text eol=lf
+
+# Бінарні файли git не повинен чіпати
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.pdf    binary
+*.docx   binary
+*.pptx   binary
+*.xlsx   binary
+*.zip    binary
+
+# Ноутбук краще показувати як текст у diff
+*.ipynb  diff
