@@ -1,0 +1,23 @@
+# Вихідні дані: завантажуються з Kaggle (див. README.md)
+data/raw/*.csv
+*.zip
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Tableau: робочі копії
+*.twbr
+
+# Система
+.DS_Store
+Thumbs.db
+
+# Тимчасові файли Microsoft Office
+~$*
+
+# Проміжні файли, що перегенеровуються ноутбуком
+data/processed/*.csv
