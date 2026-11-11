@@ -40,15 +40,21 @@ Python 3.10+, pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook, Tableau Publ
 course-project/
 ├── data/
 │   ├── raw/                 # вихідні CSV з Kaggle (не в репозиторії)
-│   └── processed/           # агреговані дані після опрацювання
+│   └── processed/           # проміжні дані (перегенеровуються ноутбуком)
+├── docs/
+│   ├── Пояснювальна_записка.docx
+│   └── Презентація.pptx
 ├── notebooks/
 │   └── analysis.ipynb       # основний ноутбук: повний цикл аналізу
 ├── results/
-│   ├── figures/             # графіки (PNG)
-│   └── exports/             # підсумкові таблиці (CSV)
-├── tableau/                 # дані та інструкція для дашборда
+│   ├── figures/             # 9 графіків (PNG)
+│   └── exports/             # 9 підсумкових таблиць (CSV)
+├── tableau/
+│   ├── flights_tableau.csv  # агреговані дані для дашборда
+│   └── screenshots/         # скриншоти панелі
 ├── README.md
 ├── requirements.txt
+├── .gitattributes
 └── .gitignore
 ```
 
@@ -86,5 +92,16 @@ jupyter notebook notebooks/analysis.ipynb
 
 **Інтерактивні елементи:** фільтри за авіакомпанією, штатом і діапазоном місяців (застосовуються до всіх аркушів),
 а також дія-фільтр: клік по аеропорту на карті фільтрує решту аркушів.
+
+У файлі `tableau/flights_tableau.csv` зберігаються лише суми й кількості, а відсотки та середні
+рахуються обчислюваними полями Tableau – завдяки цьому фільтри перераховують показники коректно,
+без усереднення середніх:
+
+| Поле | Формула |
+|---|---|
+| Частка затриманих | `SUM([delayed]) / SUM([completed])` |
+| Частка скасованих | `SUM([cancelled]) / SUM([flights])` |
+| Середня затримка, хв | `SUM([arr_delay_sum]) / SUM([completed])` |
+| Рейсів | `SUM([flights])` |
 
 Скриншоти – у `tableau/screenshots/`.
