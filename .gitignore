@@ -18,6 +18,3 @@ Thumbs.db
 
 # Тимчасові файли Microsoft Office
 ~$*
-
-# Проміжні файли, що перегенеровуються ноутбуком
-data/processed/*.csv
