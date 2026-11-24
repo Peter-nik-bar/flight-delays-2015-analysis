@@ -36,7 +36,8 @@ https://www.kaggle.com/datasets/usdot/flight-delays
 
 ## Технології
 
-Python 3.10+, pandas, NumPy, SciPy, Matplotlib, Seaborn, Jupyter Notebook, Tableau Public.
+Python 3.10 або новіший (ноутбук виконано на 3.12), pandas, NumPy, SciPy, Matplotlib,
+Seaborn, Jupyter Notebook, Tableau Public.
 
 ## Структура проєкту
 
